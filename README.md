@@ -1,13 +1,94 @@
-## How Frontend vs Backend works
+# Racing Game
 
-### Frontend
+# How to start
+
+1. Install Nest CLI: The command line utility for Nest projects
+2. Create new projecct
+3. Understand the directory structure and typical parts
+
+
+## Rules
+
+- Using Conventional naming in commits
+- Always try return type in TypeScript
+
+## Standards for return codes
+
+| **200 - 299** | **Suceess**
+|----------:|---------
+| 200 | OK
+| 201 | Created
+| 204 | No Content
+| **300 - 399** | **Redirects**
+| 301 | Moved permanently
+| 302 | Found |
+| 304 | Not modified
+| **400 - 499** | **Client error**
+| 400 | Bad Request 
+| 401 | Unathorized 
+| 403 | Forbidden 
+| 404 | Not Found 
+| 405 | Method Not Alloed 
+| **500 - 599** | **Server Error**
+| 500 | Intenal Server Error  
+| 502 | Bad Gatweay  
+| 503 | Service Unvailable  
+| 504 |Gateway Timeout  
+
+
+## Future
+
+- Specialize to write tests
+
+## How Udemy can helps?
+
+- Look on Q&A, current lection and ask the question
+- Also many videos has many resources like state of the project on GitHub
+
+## Installation
+
+```bash
+$ yarn install
+```
+
+## Running the app
+
+```bash
+# development
+$ yarn run start
+
+# watch mode
+$ yarn run start:dev
+
+# production mode
+$ yarn run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ yarn run test
+
+# e2e tests
+$ yarn run test:e2e
+
+# test coverage
+$ yarn run test:cov
+```
+
+## Support
+
+### Theory how our backend workds 
+
+#### Frontend
 
  - JavaScript in the Browser
  - Using DOM
  - HTML & CSS
  - Frontend frameworks like React, Vue, Angular, Svelte
 
- ## Backend
+#### Backend
 
  - JavaScript in the OS (Application server)
  - Using Node.js
@@ -16,7 +97,7 @@
  - Backend frameworks like Express, Fastify (NestJS is using of Fastify), NestJS
 
 
-## NestJS Advantages
+#### NestJS Advantages
 
 - Well organized code
 - Modular design
@@ -30,16 +111,15 @@
 - Data validation
 - Logging
 
-## Rules
 
-- Using Conventional naming in commits
-- Always try return type in TypeScript
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Future
+## Stay in touch
 
-- Specialize to write tests
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## How Udemy can helps?
+## License
 
-- Look on Q&A, current lection and ask the question
-- Also many videos has many resources like state of the project on GitHub
+Nest is [MIT licensed](LICENSE).
