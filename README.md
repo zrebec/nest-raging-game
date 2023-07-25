@@ -1,5 +1,9 @@
 # Racing Game
 
+## TODO:
+[x] Change int age for Date
+[x] Make a custom validator for age for 15 for Today
+
 # How to start
 
 1. Install Nest CLI: The command line utility for Nest projects
