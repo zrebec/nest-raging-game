@@ -7,7 +7,8 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { DriverDto } from './dto/driver.dto';
+import { EventCreateDto } from './dto/event-create';
+import { EventUpdateDto } from './dto/event-update';
 
 @Controller('/events')
 export class EventsController {
@@ -19,18 +20,19 @@ export class EventsController {
     ];
   }
 
+  @Get(':id')
+  findOne(@Param('id') id: number) {
+    return { statusCode: 200, message: `Found item with ID '${id}'` };
+  }
+
   @Post()
-  addDriver(@Body() driver: DriverDto) {
-    return {
-      statusCode: 200,
-      statusMessage: 'Sucessfully created',
-      data: driver,
-    };
+  create(@Body() driver: EventCreateDto) {
+    return driver;
   }
 
   @Patch(':id')
-  update(@Param('id') id: number) {
-    return { statusCode: 201, message: `Updated item with ID '${id}'` };
+  update(@Param('id') id: number, @Body() driver: EventUpdateDto) {
+    return driver;
   }
 
   @Delete(':id')
