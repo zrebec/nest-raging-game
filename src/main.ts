@@ -16,7 +16,12 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   // This means that every DTO (object) will use validation if class-validatorm is declared
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      forbidNonWhitelisted: true,
+    }),
+  );
 
   await app.listen(3000);
 }
